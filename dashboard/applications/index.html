@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications</title>
+    <!-- fontawesome library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap library -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- styles' sheets -->
+    <link rel="stylesheet" href="/styles/custom.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+</head>
+
+<body>
+    <div class="container-fluid overflow-hidden">
+        <div class="row">
+            <!-- sidebar Start -->
+            <div class="sidebar col-lg-2 col-md-3 min-vh-100 py-0 py-lg-3 ps-2 ps-xxl-3 pe-0 d-flex flex-column bg-white">
+                <div class="logo d-none d-lg-block">
+                    <img src="/assets/logo.svg" alt="logo" class="height-40"/>
+                </div>
+                <nav class="py-2 py-lg-4">
+                    <ul class="nav d-flex flex-column gap-1">
+                        <li class="nav-item active transition-03">
+                            <a class="nav-link height-45 d-flex align-items-center text-capitalize ps-2 pe-3 position-relative gap-1 transition-03"
+                                href="/dashboard">
+                                <div class="icon light-color-2 width-28 transition-03">
+                                    <i class="bi bi-house fs-22"></i>
+                                </div>
+
+                                <span class="title fw-medium fs-16 light-color-2 transition-03">home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link height-45 d-flex align-items-center text-capitalize px-2 position-relative gap-1 transition-03"
+                                href="#">
+                                <div class="icon light-color-2 width-28 transition-03">
+                                    <i class="bi bi-shop fs-22"></i>
+                                </div>
+                                <span class="title fw-medium fs-16 light-color-2 transition-03">stores</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#catalogSublinks"
+                                class="nav-link height-45 d-flex align-items-center justify-content-between gap-1 text-capitalize ps-2 pe-3 position-relative transition-03"
+                                role="button" data-bs-toggle="collapse" aria-expanded="false"
+                                aria-controls="catalogSublinks">
+                                <div class="d-flex align-items-center gap-1">
+                                    <div class="icon light-color-2 width-28 transition-03">
+                                        <i class="bi bi-grid fs-22"></i>
+                                    </div>
+                                    <span class="title fw-medium fs-16 light-color-2 transition-03">catalog</span>
+                                </div>
+                                <i class="icon fa-solid fa-chevron-down light-color-2 fs-18 transition-03"></i>
+                            </a>
+                            <div class="collapse" id="catalogSublinks">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link d-flex align-items-center position-relative">
+                                            <span
+                                                class="link-subtitle light-color-2 fw-medium fs-16 ps-20 transition-03 text-capitalize">sublink</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link d-flex align-items-center position-relative">
+                                            <span
+                                                class="link-subtitle light-color-2 fw-medium fs-16 ps-20 transition-03 text-capitalize">sublink</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link height-45 d-flex align-items-center text-capitalize px-2 position-relative gap-1 transition-03"
+                                href="#">
+                                <div class="icon light-color-2 width-28 transition-03">
+                                    <i class="bi bi-box-seam fs-22"></i>
+                                </div>
+                                <span class="title link-title fw-medium fs-16 light-color-2 transition-03">products</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#ordersSublinks"
+                                class="nav-link height-45 d-flex align-items-center justify-content-between text-capitalize ps-2 pe-3 position-relative transition-03"
+                                role="button" data-bs-toggle="collapse" aria-expanded="false"
+                                aria-controls="ordersSublinks">
+                                <div class="d-flex align-items-center gap-1">
+                                    <div class="icon light-color-2 width-28 transition-03">
+                                        <i class="bi bi-bag fs-22"></i>
+                                    </div>
+                                    <span class="title fw-medium fs-16 light-color-2 transition-03">orders</span>
+                                </div>
+                                <i class="icon fa-solid fa-chevron-down light-color-2 fs-18 transition-03"></i>
+                            </a>
+                            <div class="collapse" id="ordersSublinks">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link d-flex align-items-center position-relative">
+                                            <span
+                                                class="link-subtitle light-color-2 fw-medium fs-16 ps-20 transition-03 text-capitalize">sublink</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link d-flex align-items-center position-relative">
+                                            <span
+                                                class="link-subtitle light-color-2 fw-medium fs-16 ps-20 transition-03 text-capitalize">sublink</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item position-relative">
+                            <a class="nav-link height-45 d-flex align-items-center text-capitalize px-2 position-relative gap-1 transition-03"
+                                href="../applications">
+                                <div class="icon light-color-2 width-28 transition-03">
+                                    <i class="bi bi-journal-code fs-22"></i>
+                                </div>
+                                <span class="title link-title fw-medium fs-16 light-color-2 transition-03">application</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#extensSublinks"
+                                class="nav-link height-45 d-flex align-items-center justify-content-between text-capitalize ps-2 pe-3 position-relative transition-03"
+                                data-bs-toggle="collapse" aria-expanded="false" aria-controls="extensSublinks">
+                                <div class="d-flex align-items-center gap-1">
+                                    <div class="icon light-color-2 width-28 transition-03">
+                                        <i class="bi bi-puzzle fs-22"></i>
+                                    </div>
+                                    <span class="title fw-medium fs-16 light-color-2 transition-03">extensions</span>
+                                </div>
+                                <i class="icon fa-solid fa-chevron-down light-color-2 fs-18 transition-03"></i>
+                            </a>
+                            <div class="collapse" id="extensSublinks">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link d-flex align-items-center position-relative">
+                                            <span
+                                                class="link-subtitle light-color-2 fw-medium fs-16 ps-20 transition-03 text-capitalize">sublink</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link d-flex align-items-center position-relative">
+                                            <span
+                                                class="link-subtitle light-color-2 fw-medium fs-16 ps-20 transition-03 text-capitalize">sublink</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#settingsSublinks"
+                                class="nav-link height-45 d-flex align-items-center justify-content-between text-capitalize ps-2 pe-3 position-relative transition-03"
+                                role="button" data-bs-toggle="collapse" aria-expanded="false"
+                                aria-controls="settingsSublinks">
+                                <div class="d-flex align-items-center gap-1">
+                                    <div class="icon light-color-2 width-28 transition-03">
+                                        <i class="bi bi-gear-wide-connected fs-22"></i>
+                                    </div>
+                                    <span class="title fw-medium fs-16 light-color-2 transition-03">settings</span>
+                                </div>
+                                <i class="icon fa-solid fa-chevron-down light-color-2 fs-18 transition-03"></i>
+                            </a>
+                            <div class="collapse" id="settingsSublinks">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link d-flex align-items-center position-relative">
+                                            <span
+                                                class="link-subtitle light-color-2 fw-medium fs-16 ps-20 transition-03 text-capitalize">sublink</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link d-flex align-items-center position-relative">
+                                            <span
+                                                class="link-subtitle light-color-2 fw-medium fs-16 ps-20 transition-03 text-capitalize">sublink</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#supportSublinks"
+                                class="nav-link height-45 d-flex align-items-center justify-content-between text-capitalize position-relative ps-2 pe-3 transition-03"
+                                role="button" data-bs-toggle="collapse" aria-expanded="false"
+                                aria-controls="supportSublinks">
+                                <div class="d-flex align-items-center gap-1">
+                                    <div class="icon light-color-2 width-28 transition-03">
+                                        <i class="bi bi-headset fs-22"></i>
+                                    </div>
+                                    <span class="title fw-medium fs-16 light-color-2 transition-03">support</span>
+                                </div>
+                                <i class="icon fa-solid fa-chevron-down light-color-2 fs-18 transition-03"></i>
+                            </a>
+                            <div class="collapse" id="supportSublinks">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link d-flex align-items-center position-relative">
+                                            <span
+                                                class="link-subtitle light-color-2 fw-medium fs-16 ps-20 transition-03 text-capitalize">sublink</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link d-flex align-items-center position-relative">
+                                            <span
+                                                class="link-subtitle light-color-2 fw-medium fs-16 ps-20 transition-03 text-capitalize">sublink</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link height-45 d-flex align-items-center text-capitalize px-2 position-relative gap-1 transition-03"
+                                href="#">
+                                <div class="icon light-color-2 width-28 transition-03">
+                                    <i class="bi bi-box-arrow-right fs-22"></i>
+                                </div>
+                                <span class="title fw-medium fs-16 light-color-2 transition-03">logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- sidebar End -->
+
+            <!-- application Start -->
+            <div class="content col-12 col-lg-10 bg-vista-white position-relative px-0">
+                <div class="position-relative pb-4">
+                    <header class="d-flex align-items-center justify-content-between py-3 px-3 px-sm-4 mx-sm-2">
+                        <div class="d-flex align-items-center justify-content-center gap-2">
+                            <div class="sidebar-icon width-40 height-40 align-items-center justify-content-center bg-white rounded-circle"
+                                role="button">
+                                <i class="fa-solid fa-bars-staggered fs-18"></i>
+                            </div>
+    
+                            <h2 class="page-title text-capitalize fs-24 fw-medium dark-color m-0 d-none d-lg-block">
+                                applications
+                            </h2>
+
+                            <div class="calender d-lg-none">
+                                <div class="calender-icon width-40 height-40 d-flex align-items-center justify-content-center bg-white rounded-circle"
+                                    role="button">
+                                    <i class="fa-solid fa-calendar-days fs-18"></i>
+                                </div>
+                                <div class="calender-window position-absolute bg-white p-20 radius-10 d-none">
+                                    <div class="row gx-1">
+                                        <div class="col-3">
+                                            <ul class="nav w-100">
+                                                <li class="nav-item fs-14 fw-normal d-flex align-items-center ps-1 text-capitalize rounded-3"
+                                                    id="today" role="button">
+                                                    today
+                                                </li>
+                                                <li class="nav-item fs-14 fw-normal d-flex align-items-center ps-1 text-capitalize rounded-3"
+                                                    role="button">
+                                                    Yesterday
+                                                </li>
+                                                <li class="nav-item fs-14 fw-normal d-flex align-items-center ps-1 text-capitalize rounded-3"
+                                                    role="button">
+                                                    Last 7 days
+                                                </li>
+                                                <li class="nav-item fs-14 fw-normal d-flex align-items-center ps-1 text-capitalize rounded-3"
+                                                    role="button">
+                                                    Last 30 days
+                                                </li>
+                                                <li class="nav-item fs-14 fw-normal d-flex align-items-center ps-1 text-capitalize rounded-3"
+                                                    role="button">
+                                                    Last 90 days
+                                                </li>
+                                                <li class="nav-item fs-14 fw-normal d-flex align-items-center ps-1 text-capitalize rounded-3"
+                                                    role="button">
+                                                    Last month
+                                                </li>
+                                                <li class="nav-item fs-14 fw-normal d-flex align-items-center ps-1 text-capitalize rounded-3"
+                                                    role="button">
+                                                    Last Year
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="calender-view">
+                                                <div class="d-flex align-items-center justify-content-start gap-3 mb-2">
+                                                    <h1 class="monthYearDisplay m-0 fs-20 fw-medium dark-color m-1">
+                                                        February 2024
+                                                    </h1>
+                                                    <div class="d-flex align-items-center justify-content-center">
+                                                        <button
+                                                            class="btn prevMonth p-0 d-flex align-items-center me-2 border-0">
+                                                            <i class="fa-solid fa-arrow-left dark-color fs-18"></i>
+                                                        </button>
+                                                        <button
+                                                            class="btn nextMonth p-0 d-flex align-items-center border-0">
+                                                            <i class="fa-solid fa-arrow-right dark-color fs-18"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="weekdays fs-16 fw-normal open-sans grey-color-2 text-center mb-2">
+                                                    <div class="width-40">Sun</div>
+                                                    <div class="width-40">Mon</div>
+                                                    <div class="width-40">Tue</div>
+                                                    <div class="width-40">Wed</div>
+                                                    <div class="width-40">Thu</div>
+                                                    <div class="width-40">Fri</div>
+                                                    <div class="width-40">Sat</div>
+                                                </div>
+                                                <div class="days-of-month" id="daysOfMonth"></div>
+                                                <div class="d-flex align-items-center justify-content-end gap-2 mt-4">
+                                                    <button
+                                                        class="calender-btn apply fs-16 w-normal text-white radius-5 text-capitalize d-flex align-items-center justify-content-center border-0 transition-03 scale-96">
+                                                        apply
+                                                    </button>
+                                                    <button
+                                                        class="calender-btn cancel fs-16 w-normal dark-color radius-5 text-capitalize d-flex align-items-center justify-content-center bg-transparent transition-03 scale-96">
+                                                        cancel
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center justify-content-between gap-3 gap-sm-4">
+                            <div class="dropdown d-none d-lg-block">
+                                <button
+                                    class="fs-16 fw-medium light-color d-flex align-items-center justify-content-center text-capitalize dropdown-toggle border-0 bg-transparent"
+                                    type="button" id="langs_list" data-bs-toggle="dropdown" aria-expanded="false">
+                                    english
+                                    <i class="fa-solid fa-chevron-down ms-1"></i>
+                                </button>
+                                <ul class="dropdown-menu bg-white py-0 overflow-hidden" aria-labelledby="langs_list">
+                                    <li>
+                                        <a href="#" class="dropdown-item height-40 light-color ps-10 fw-medium fs-16 text-capitalize d-flex align-items-center transition-03">arabic</a>
+                                    </li>
+                                </ul>
+                            </div>
+    
+                            <div class="dropdown d-none d-lg-block">
+                                <button class="fs-16 fw-medium light-color d-flex align-items-center justify-content-center text-capitalize dropdown-toggle border-0 bg-transparent"
+                                        type="button" id="stores_list" data-bs-toggle="dropdown" aria-expanded="false">
+                                    all stores
+                                    <i class="fa-solid fa-chevron-down ms-1"></i>
+                                </button>
+                                <ul class="dropdown-menu bg-white py-0 overflow-hidden" aria-labelledby="stores_list">
+                                    <li>
+                                        <a href="#" class="dropdown-item height-40 light-color ps-10 fw-medium fs-16 text-capitalize d-flex align-items-center transition-03">store 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-item height-40 light-color ps-10 fw-medium fs-16 text-capitalize d-flex align-items-center transition-03">store 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-item height-40 light-color ps-10 fw-medium fs-16 text-capitalize d-flex align-items-center transition-03">store 3</a>
+                                    </li>
+                                </ul>
+                            </div>
+    
+                            <div class="bell width-40 height-40 d-flex align-items-center justify-content-center position-relative rounded-circle bg-white"
+                                role="button">
+                                <img src="/assets/bell.svg" alt="icon" />
+                            </div>
+    
+                            <a href="../profile">
+                                <div class="profile width-40 height-40 rounded-circle transition-03 scale-96" role="button">
+                                    <img src="/assets/profile.svg" alt="icon" />
+                                </div>
+                            </a>
+                        </div>
+    
+                        <!-- notifications panel -->
+                        <div class="notifications-panel p-4 d-flex flex-column justify-content-between bg-white position-absolute transition-05">
+                            <div class="notifications orders">
+                                <div class="d-flex align-items-center justify-content-between mb-2">
+                                    <h2 class="text-capitalize text-decoration-underline fs-16 fw-semibold dark-color">
+                                        order(<span class="notifications-count">52</span>)
+                                    </h2>
+                                    <a href="#" class="fs-16 fw-normal dark-color-2 text-capitalize">clear all</a>
+                                </div>
+                                <ul class="nav gap-3 overflow-scroll">
+                                    <li class="nav-item">
+                                        <div class="d-flex flex-column border-2 border-bottom pb-2">
+                                            <div class="d-flex align-items-center gap-2 mb-1">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="width-8 height-8 bg-blue"></div>
+                                                    <span class="fs-14 fw-normal text-capitalize grey-color-4 ms-1">billing</span>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="width-5 height-5 rounded-circle bg-dark"></div>
+                                                    <span class="fs-14 fw-normal text-capitalize grey-color-4">Sunday at 4.30 PM</span>
+                                                </div>
+                                            </div>
+    
+                                            <div class="d-flex align-items-start">
+                                                <div class="min-w-18 height-18 d-flex align-items-center justify-content-center rounded-circle border-1 border-solid accent-border fs-12 fw-semibold accent-color">
+                                                    !
+                                                </div>
+                                                <div class="d-flex flex-column gap-1 ms-1">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <h2 class="fs-16 fw-normal dark-color-3 fl-capitalize m-0">your order has been canceled</h2>
+                                                        <input type="checkbox" name="notification" class="notifi-select width-16 height-16 rounded-circle bg-transparent border-1 border-solid accent-border position-relative ms-2" checked>
+                                                    </div>
+                                                    <p class="fs-14 fw-normal grey-color-5 fl-capitalize mb-0 lh-sm">Unfortunately, your order has been canceled. If you have any questions or need assistance, please contact our support team.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="d-flex flex-column border-2 border-bottom pb-2">
+                                            <div class="d-flex align-items-center gap-2 mb-1">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="width-8 height-8 bg-blue"></div>
+                                                    <span class="fs-14 fw-normal text-capitalize grey-color-4 ms-1">billing</span>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="width-5 height-5 rounded-circle bg-dark"></div>
+                                                    <span class="fs-14 fw-normal text-capitalize grey-color-4">Sunday at 4.30 PM</span>
+                                                </div>
+                                            </div>
+    
+                                            <div class="d-flex align-items-start">
+                                                <div class="min-w-18 height-18 d-flex align-items-center justify-content-center rounded-circle border-1 border-solid accent-border fs-12 fw-semibold accent-color invisible">
+                                                    !
+                                                </div>
+                                                <div class="d-flex flex-column gap-1 ms-1">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <h2 class="fs-16 fw-normal dark-color-3 fl-capitalize m-0">your order has been canceled</h2>
+                                                        <input type="checkbox" name="notification" class="notifi-select min-w-18 height-18 rounded-circle bg-transparent border-1 border-solid accent-border position-relative ms-2">
+                                                    </div>
+                                                    <p class="fs-14 fw-normal grey-color-5 fl-capitalize mb-0 lh-sm">Unfortunately, your order has been canceled. If you have any questions or need assistance, please contact our support team.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="d-flex flex-column border-2 border-bottom pb-2">
+                                            <div class="d-flex align-items-center gap-2 mb-1">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="width-8 height-8 bg-grey"></div>
+                                                    <span class="fs-14 fw-normal text-capitalize grey-color-4 ms-1">billing</span>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="width-5 height-5 rounded-circle bg-dark"></div>
+                                                    <span class="fs-14 fw-normal text-capitalize grey-color-4">Sunday at 4.30 PM</span>
+                                                </div>
+                                            </div>
+    
+                                            <div class="d-flex align-items-start">
+                                                <div class="min-w-18 height-18 d-flex align-items-center justify-content-center rounded-circle border-1 border-solid accent-border fs-12 fw-semibold accent-color invisible">!</div>
+                                                <div class="d-flex flex-column gap-1 ms-1">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <h2 class="fs-16 fw-normal dark-color-3 fl-capitalize m-0">your order has been canceled</h2>
+                                                        <input type="checkbox" name="notification" class="notifi-select min-w-18 height-18 rounded-circle bg-transparent border-1 border-solid accent-border position-relative ms-2">
+                                                    </div>
+                                                    <p class="fs-14 fw-normal grey-color-5 fl-capitalize mb-0 lh-sm">Unfortunately, your order has been canceled. If you have any questions or need assistance, please contact our support team.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="notifications general">
+                                <h2 class="text-capitalize text-decoration-underline fs-16 fw-semibold dark-color mb-3">
+                                    general notifications(<span class="notifications-count">60</span>)
+                                </h2>
+                                <ul class="nav gap-3 overflow-scroll">
+                                    <li class="nav-item">
+                                        <div class="d-flex flex-column border-2 border-bottom pb-2">
+                                            <div class="d-flex align-items-center gap-2 mb-1">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="width-8 height-8 bg-blue"></div>
+                                                    <span class="fs-14 fw-normal text-capitalize grey-color-4 ms-1">billing</span>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="width-5 height-5 rounded-circle bg-dark"></div>
+                                                    <span class="fs-14 fw-normal text-capitalize grey-color-4">Sunday at 4.30 PM</span>
+                                                </div>
+                                            </div>
+    
+                                            <div class="d-flex align-items-start">
+                                                <div class="min-w-18 height-18 d-flex align-items-center justify-content-center rounded-circle border-1 border-solid accent-border fs-12 fw-semibold accent-color">
+                                                    !
+                                                </div>
+                                                <div class="d-flex flex-column gap-1 ms-1">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <h2 class="fs-16 fw-normal dark-color-3 fl-capitalize m-0">Your account has been accessed from a new device: Desktop-win10-chrome 128.0-66.85.73.110-US.</h2>
+                                                        <input type="checkbox" name="notification" class="notifi-select min-w-16 height-16 rounded-circle bg-transparent border-1 border-solid accent-border position-relative ms-2">
+                                                    </div>
+                                                    <p class="fs-14 fw-normal grey-color-5 fl-capitalize mb-0 lh-sm">Unfortunately, your order has been canceled. If you have any questions or need assistance, please contact our support team.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="d-flex flex-column border-2 border-bottom pb-2">
+                                            <div class="d-flex align-items-center gap-2 mb-1">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="width-8 height-8 bg-blue"></div>
+                                                    <span class="fs-14 fw-normal text-capitalize grey-color-4 ms-1">billing</span>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="width-5 height-5 rounded-circle bg-dark"></div>
+                                                    <span class="fs-14 fw-normal text-capitalize grey-color-4">Sunday at 4.30 PM</span>
+                                                </div>
+                                            </div>
+    
+                                            <div class="d-flex align-items-start">
+                                                <div class="min-w-18 height-18 d-flex align-items-center justify-content-center rounded-circle border-1 border-solid accent-border fs-12 fw-semibold accent-color invisible">
+                                                    !
+                                                </div>
+                                                <div class="d-flex flex-column gap-1 ms-1">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <h2 class="fs-16 fw-normal dark-color-3 fl-capitalize m-0">your order has been canceled</h2>
+                                                        <input type="checkbox" name="notification" class="notifi-select width-18 height-18 rounded-circle bg-transparent border-1 border-solid accent-border position-relative ms-2">
+                                                    </div>
+                                                    <p class="fs-14 fw-normal grey-color-5 fl-capitalize mb-0 lh-sm">Unfortunately, your order has been canceled. If you have any questions or need assistance, please contact our support team.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button
+                                class="fs-16 fw-normal accent-color-3 d-flex align-items-center justify-content-center ms-auto border-0 bg-transparent">
+                                View all notifications
+                                <i class="fa-solid fa-arrow-up rotate-45 fs-20 ms-1"></i>
+                            </button>
+                        </div>
+                    </header>
+    
+                    <!-- search bar -->
+                    <div class="row mt-4 mt-sm-5 mx-auto px-3 px-sm-4 mx-sm-2">
+                        <div class="px-0 d-flex flex-column flex-sm-row align-items-center justify-content-start gap-3 position-relative">
+                            <div class="col-12 col-sm-6">
+                                <div
+                                    class="w-100 d-flex align-items-center rounded-pill bg-white p-2 ps-3 border-solid border-2 light-border">
+                                    <div class="grey-color width-28 fs-18">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </div>
+                                    <input type="text" placeholder="Search here" class="w-100 fs-18 fw-medium dark-color border-0" />
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-3">
+                                <!-- category menu -->
+                                <div class="category-menu position-relative">
+                                    <button
+                                        class="app-btn transition-03 py-2 px-3 dark-color fs-16 text-capitalize fw-medium radius-10 border-2 border-solid accent-border bg-transparent"
+                                        type="button">
+                                        category
+                                        <i class="fa-solid fa-chevron-down dark-color fs-16 ms-1"></i>
+                                    </button>
+                                    <div class="categories d-none position-absolute rounded-2 bg-white mt-2 shadow-1">
+                                        <div class="menu-btn w-100 pt-1 text-end px-2 x-color fs-18" role="button">
+                                            <i class="fa-solid fa-x fs-20 m-2"></i>
+                                        </div>
+                                        <ul class="nav w-100 p-0">
+                                            <li class="nav-item w-100">
+                                                <a href="#"
+                                                    class="nav-link d-flex ps-3 align-items-center height-45 fs-16 fw-medium text-capitalize dark-color-2 position-relative transition-03">EasyGco
+                                                    Store</a>
+                                            </li>
+                                            <li class="nav-item w-100">
+                                                <a href="#"
+                                                    class="nav-link d-flex ps-3 align-items-center height-45 fs-16 fw-medium text-capitalize dark-color-2 position-relative transition-03">Shipping</a>
+                                            </li>
+                                            <li class="nav-item w-100">
+                                                <a href="#"
+                                                    class="nav-link d-flex ps-3 align-items-center height-45 fs-16 fw-medium text-capitalize dark-color-2 position-relative transition-03">Automations</a>
+                                            </li>
+                                            <li class="nav-item w-100">
+                                                <a href="#"
+                                                    class="nav-link d-flex ps-3 align-items-center height-45 fs-16 fw-medium text-capitalize dark-color-2 position-relative transition-03">Payment</a>
+                                            </li>
+                                            <li class="nav-item w-100">
+                                                <a href="#"
+                                                    class="nav-link d-flex ps-3 align-items-center height-45 fs-16 fw-medium text-capitalize dark-color-2 position-relative transition-03">Templates</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- applications menu -->
+                                <div class="application-menu">
+                                    <button
+                                        class="app-btn transition-03 py-2 px-4 text-white bg-accent fs-16 text-capitalize fw-normal radius-10 border-2 border-solid accent-border"
+                                        type="button">
+                                        my application
+                                        <i class="fa-solid fa-chevron-down text-white fs-16 ms-1"></i>
+                                    </button>
+                                    <div class="applications d-none position-absolute w-100 radius-10 bg-white mt-2 shadow-1 p-3 p-sm-4">
+                                        <div class="menu-btn w-100 pb-1 text-end x-color fs-22 mb-2" role="button">
+                                            <i class="fa-solid fa-x"></i>
+                                        </div>
+                                        <div class="w-100 d-flex align-items-center justify-content-between mb-3">
+                                            <div class="width-180 height-30 d-none d-sm-flex align-items-start gap-1">
+                                                <span class="h-100 text-capitalize fs-16 fw-medium">section</span>
+                                                <div class="d-flex flex-column justify-content-start gap-0">
+                                                    <i class="fa-solid fa-caret-up dark-color height-8 fs-16"></i>
+                                                    <i class="fa-solid fa-caret-down dark-color height-8 fs-16"></i>
+                                                </div>
+                                            </div>
+                                            <div class="width-260 height-30 d-none d-sm-flex align-items-start gap-1">
+                                                <span class="h-100 text-capitalize fs-16 fw-medium">application</span>
+                                                <div class="d-flex flex-column justify-content-start gap-0">
+                                                    <i class="fa-solid fa-caret-up dark-color height-8 fs-16"></i>
+                                                    <i class="fa-solid fa-caret-down dark-color height-8 fs-16"></i>
+                                                </div>
+                                            </div>
+                                            <div class="app-title width-260 height-30 d-flex d-sm-none align-items-start gap-1">
+                                                <span class="h-100 text-capitalize fs-16 fw-medium">section & application</span>
+                                                <div class="d-flex flex-column justify-content-start gap-0">
+                                                    <i class="fa-solid fa-caret-up dark-color height-8 fs-16"></i>
+                                                    <i class="fa-solid fa-caret-down dark-color height-8 fs-16"></i>
+                                                </div>
+                                            </div>
+                                            <div class="app-control-title width-180 height-30 d-flex align-items-start gap-1 pe-5 pe-sm-0">
+                                                <span class="h-100 text-capitalize fs-16 fw-medium">control</span>
+                                                <div class="d-flex flex-column justify-content-start gap-0">
+                                                    <i class="fa-solid fa-caret-up dark-color height-8 fs-16"></i>
+                                                    <i class="fa-solid fa-caret-down dark-color height-8 fs-16"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Menu Elements -->
+                                        <ul class="nav w-100 p-0 gap-1">
+                                            <li class="nav-item app-drop-row w-100 mb-1 px-0 d-flex align-items-center justify-content-between gap-2 gap-sm-0 py-2 dark-color-2 border-bottom border-2">
+                                                <div class="d-flex d-sm-none flex-column">
+                                                    <span class="text-capitalize fs-16 fw-medium">Merchant Gateways</span>
+                                                    <span class="text-start text-capitalize fs-14 fw-normal">Manual Payment Merchant Gateway</span>
+                                                </div>
+                                                <span class="d-none d-sm-block width-180 text-capitalize fs-16 fw-medium">Merchant Gateways</span>
+                                                <span class="d-none d-sm-block width-260 text-start text-capitalize fs-16 fw-normal">Manual Payment Merchant Gateway</span>
+                                                <div class="d-flex align-items-center justify-content-between gap-2 gap-sm-3">
+                                                    <button class="text-capitalize height-35 px-3 rounded-3 text-white bg-accent-2 fs-16 fw-normal border-0 transition-03 scale-96">
+                                                        manage
+                                                    </button>
+                                                    <button class="text-capitalize px-sm-2 rounded-3 dark-color bg-transparent border-0">
+                                                        <span class="fs-16 fw-normal text-decoration-underline d-none d-sm-block">remove</span>
+                                                        <i class="fa-regular fa-trash-can d-sm-none fs-18 "></i>
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item app-drop-row w-100 mb-1 px-0 d-flex align-items-center justify-content-between gap-2 gap-sm-0 py-2 dark-color-2 border-bottom border-2">
+                                                <div class="d-flex d-sm-none flex-column">
+                                                    <span class="text-capitalize fs-16 fw-medium">Product Automations</span>
+                                                    <span class="text-start text-capitalize fs-14 fw-normal">Dhru Fusion Automation</span>
+                                                </div>
+                                                <span class="d-none d-sm-block width-180 text-capitalize fs-16 fw-medium">Product Automations</span>
+                                                <span class="d-none d-sm-block width-260 text-start text-capitalize fs-16 fw-normal">Dhru Fusion Automation</span>
+                                                <div class="d-flex align-items-center justify-content-between gap-2 gap-sm-3">
+                                                    <button class="text-capitalize height-35 px-3 rounded-3 text-white bg-accent-2 fs-16 fw-normal border-0 transition-03 scale-96">
+                                                        manage
+                                                    </button>
+                                                    <button class="text-capitalize px-sm-2 rounded-3 dark-color bg-transparent border-0">
+                                                        <span class="fs-16 fw-normal text-decoration-underline d-none d-sm-block">remove</span>
+                                                        <i class="fa-regular fa-trash-can d-sm-none fs-18 "></i>
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item app-drop-row w-100 mb-1 px-0 d-flex align-items-center justify-content-between gap-2 gap-sm-0 py-2 dark-color-2 border-bottom border-2">
+                                                <div class="d-flex d-sm-none flex-column">
+                                                    <span class="text-capitalize fs-16 fw-medium">Product Automations</span>
+                                                    <span class="text-start text-capitalize fs-14 fw-normal">Digital Code</span>
+                                                </div>
+                                                <span class="d-none d-sm-block width-180 text-capitalize fs-16 fw-medium">Product Automations</span>
+                                                <span class="d-none d-sm-block width-260 text-start text-capitalize fs-16 fw-normal">Digital Code</span>
+                                                <div class="d-flex align-items-center justify-content-between gap-2 gap-sm-3">
+                                                    <button class="text-capitalize height-35 px-3 rounded-3 text-white bg-accent-2 fs-16 fw-normal border-0 transition-03 scale-96">
+                                                        manage
+                                                    </button>
+                                                    <button class="text-capitalize px-sm-2 rounded-3 dark-color bg-transparent border-0">
+                                                        <span class="fs-16 fw-normal text-decoration-underline d-none d-sm-block">remove</span>
+                                                        <i class="fa-regular fa-trash-can d-sm-none fs-18 "></i>
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item app-drop-row w-100 mb-1 px-0 d-flex align-items-center justify-content-between gap-2 gap-sm-0 py-2 dark-color-2 border-bottom border-2">
+                                                <div class="d-flex d-sm-none flex-column">
+                                                    <span class="text-capitalize fs-16 fw-medium">Product Automations</span>
+                                                    <span class="text-start text-capitalize fs-14 fw-normal">Digital Solution</span>
+                                                </div>
+                                                <span class="d-none d-sm-block width-180 text-capitalize fs-16 fw-medium">Product Automations</span>
+                                                <span class="d-none d-sm-block width-260 text-start text-capitalize fs-16 fw-normal">Digital Solution</span>
+                                                <div class="d-flex align-items-center justify-content-between gap-2 gap-sm-3">
+                                                    <button class="text-capitalize height-35 px-3 rounded-3 text-white bg-accent-2 fs-16 fw-normal border-0 transition-03 scale-96">
+                                                        manage
+                                                    </button>
+                                                    <button class="text-capitalize px-sm-2 rounded-3 dark-color bg-transparent border-0">
+                                                        <span class="fs-16 fw-normal text-decoration-underline d-none d-sm-block">remove</span>
+                                                        <i class="fa-regular fa-trash-can d-sm-none fs-18"></i>
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item app-drop-row w-100 mb-1 px-0 d-flex align-items-center justify-content-between gap-2 gap-sm-0 py-2 dark-color-2 border-bottom border-2">
+                                                <div class="d-flex d-sm-none flex-column">
+                                                    <span class="text-capitalize fs-16 fw-medium">Shipping Methods</span>
+                                                    <span class="text-start text-capitalize fs-14 fw-normal">FlatRate Shipping</span>
+                                                </div>
+                                                <span class="d-none d-sm-block width-180 text-capitalize fs-16 fw-medium">Shipping Methods</span>
+                                                <span class="d-none d-sm-block width-260 text-start text-capitalize fs-16 fw-normal">FlatRate Shipping</span>
+                                                <div class="d-flex align-items-center justify-content-between gap-2 gap-sm-3">
+                                                    <button class="text-capitalize height-35 px-3 rounded-3 text-white bg-accent-2 fs-16 fw-normal border-0 transition-03 scale-96">
+                                                        manage
+                                                    </button>
+                                                    <button class="text-capitalize px-sm-2 rounded-3 dark-color bg-transparent border-0">
+                                                        <span class="fs-16 fw-normal text-decoration-underline d-none d-sm-block">remove</span>
+                                                        <i class="fa-regular fa-trash-can d-sm-none fs-18 "></i>
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item app-drop-row w-100 mb-1 px-0 d-flex align-items-center justify-content-between gap-2 gap-sm-0 py-2 dark-color-2 border-bottom border-2">
+                                                <div class="d-flex d-sm-none flex-column">
+                                                    <span class="text-capitalize fs-16 fw-medium">Shipping Methods</span>
+                                                    <span class="text-start text-capitalize fs-14 fw-normal">Free Shipping</span>
+                                                </div>
+                                                <span class="d-none d-sm-block width-180 text-capitalize fs-16 fw-medium">Shipping Methods</span>
+                                                <span class="d-none d-sm-block width-260 text-start text-capitalize fs-16 fw-normal">Free Shipping</span>
+                                                <div class="d-flex align-items-center justify-content-between gap-2 gap-sm-3">
+                                                    <button class="text-capitalize height-35 px-3 rounded-3 text-white bg-accent-2 fs-16 fw-normal border-0 transition-03 scale-96">
+                                                        manage
+                                                    </button>
+                                                    <button class="text-capitalize px-sm-2 rounded-3 dark-color bg-transparent border-0">
+                                                        <span class="fs-16 fw-normal text-decoration-underline d-none d-sm-block">remove</span>
+                                                        <i class="fa-regular fa-trash-can d-sm-none fs-18 "></i>
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item app-drop-row w-100 mb-1 px-0 d-flex align-items-center justify-content-between gap-2 gap-sm-0 py-2 dark-color-2 border-bottom border-2">
+                                                <div class="d-flex d-sm-none flex-column">
+                                                    <span class="text-capitalize fs-16 fw-medium">Store Templates</span>
+                                                    <span class="text-start text-capitalize fs-14 fw-normal">GSM Store Templates</span>
+                                                </div>
+                                                <span class="d-none d-sm-block width-180 text-capitalize fs-16 fw-medium">Store Templates</span>
+                                                <span class="d-none d-sm-block width-260 text-start text-capitalize fs-16 fw-normal">GSM Store Templates</span>
+                                                <div class="d-flex align-items-center justify-content-between gap-2 gap-sm-3">
+                                                    <button class="text-capitalize height-35 px-3 rounded-3 text-white bg-accent-2 fs-16 fw-normal border-0 transition-03 scale-96">
+                                                        manage
+                                                    </button>
+                                                    <button class="text-capitalize px-sm-2 rounded-3 dark-color bg-transparent border-0">
+                                                        <span class="fs-16 fw-normal text-decoration-underline d-none d-sm-block">remove</span>
+                                                        <i class="fa-regular fa-trash-can d-sm-none fs-18 "></i>
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <!-- Last two btns -->
+                                            <li class="nav-item app-drop-row w-100 mb-1 px-0 d-flex align-items-center justify-content-between gap-2 gap-sm-0 py-2 dark-color-2 border-bottom border-2">
+                                                <div class="d-flex d-sm-none flex-column">
+                                                    <span class="text-capitalize fs-16 fw-medium">Store Features</span>
+                                                    <span class="text-start text-capitalize fs-14 fw-normal">Digital Product</span>
+                                                </div>
+                                                <span class="d-none d-sm-block width-180 text-capitalize fs-16 fw-medium">Store Features</span>
+                                                <span class="d-none d-sm-block width-260 text-start text-capitalize fs-16 fw-normal">Digital Product</span>
+                                                <div class="width-180 d-flex align-items-center justify-content-between gap-2">
+                                                    <button class="w-100 text-capitalize height-35 px-3 rounded-3 text-white bg-lavender fs-16 fw-light border-0 transition-03 scale-96">
+                                                        enable
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item app-drop-row w-100 px-0 d-flex align-items-center justify-content-between gap-2 gap-sm-0 py-2 dark-color-2 border-bottom border-2">
+                                                <div class="d-flex d-sm-none flex-column">
+                                                    <span class="text-capitalize fs-16 fw-medium">Store Features</span>
+                                                    <span class="text-start text-capitalize fs-14 fw-normal">Product Automations</span>
+                                                </div>
+                                                <span class="d-none d-sm-block width-180 text-capitalize fs-16 fw-medium">Store Features</span>
+                                                <span class="d-none d-sm-block width-260 text-start text-capitalize fs-16 fw-normal">Product Automations</span>
+                                                <div class="width-180 d-flex align-items-center justify-content-between gap-2">
+                                                    <button class="w-100 text-capitalize height-35 px-3 rounded-3 text-white bg-accent-2 fs-16 fw-light border-0 transition-03 scale-96">
+                                                        disable
+                                                    </button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cards -->
+                    <div class="row gx-4 mt-3 mx-auto px-3 mx-sm-2">
+                        <div class="app-card col-sm-6 col-md-4 col-xl-3 mt-4">
+                            <div class="h-100 radius-10 d-flex flex-column shadow-1 bg-white">
+                                <div class="height-80 w-100">
+                                    <img src="/assets/app_1.png" alt="image" class="w-100 radius-10" />
+                                </div>
+                                <div class="h-50 d-flex align-items-center px-2">
+                                    <h2 class="app-card-title w-80 text-capitalize dark-color fs-18 fw-medium m-0">
+                                        digital code
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-card col-sm-6 col-md-4 col-xl-3 mt-4">
+                            <div class="h-100 radius-10 d-flex flex-column shadow-1 bg-white">
+                                <div class="height-80 w-100">
+                                    <img src="./assets/app_2.png" alt="image" class="w-100 radius-10" />
+                                </div>
+                                <div class="h-50 d-flex align-items-center px-2">
+                                    <h2 class="app-card-title w-80 text-capitalize dark-color fs-18 fw-medium m-0">
+                                        Manual payment merchant gateway
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-card col-sm-6 col-md-4 col-xl-3 mt-4">
+                            <div class="h-100 radius-10 d-flex flex-column shadow-1 bg-white">
+                                <div class="height-80 w-100">
+                                    <img src="/assets/app_3.png" alt="image" class="w-100 radius-10" />
+                                </div>
+                                <div class="h-50 d-flex align-items-center px-2">
+                                    <h2 class="app-card-title w-80 text-capitalize dark-color fs-18 fw-medium m-0">
+                                        Paypal express checkout merchant
+                                        gateway
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-card col-sm-6 col-md-4 col-xl-3 mt-4">
+                            <div class="h-100 radius-10 d-flex flex-column shadow-1 bg-white">
+                                <div class="height-80 w-100">
+                                    <img src="/assets/app_4.png" alt="image" class="w-100 radius-10" />
+                                </div>
+                                <div class="h-50 d-flex align-items-center px-2">
+                                    <h2 class="app-card-title w-75 text-capitalize dark-color fs-18 fw-medium m-0">
+                                        Products service delivery time
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-card col-sm-6 col-md-4 col-xl-3 mt-4">
+                            <div class="h-100 radius-10 d-flex flex-column shadow-1 bg-white">
+                                <div class="height-80 w-100">
+                                    <img src="/assets/app_5.png" alt="image" class="w-100 radius-10" />
+                                </div>
+                                <div class="h-50 d-flex align-items-center px-2">
+                                    <h2 class="app-card-title text-capitalize dark-color fs-18 fw-medium m-0">
+                                        Product badges
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-card col-sm-6 col-md-4 col-xl-3 mt-4">
+                            <div class="h-100 radius-10 d-flex flex-column shadow-1 bg-white">
+                                <div class="height-80 w-100">
+                                    <img src="/assets/app_6.png" alt="image" class="w-100 radius-10" />
+                                </div>
+                                <div class="h-50 d-flex align-items-center px-2">
+                                    <h2 class="app-card-title text-capitalize dark-color fs-18 fw-medium m-0">
+                                        Product extended info
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-card col-sm-6 col-md-4 col-xl-3 mt-4">
+                            <div class="h-100 radius-10 d-flex flex-column shadow-1 bg-white">
+                                <div class="height-80 w-100">
+                                    <img src="/assets/app_7.png" alt="image" class="w-100 radius-10" />
+                                </div>
+                                <div class="h-50 d-flex align-items-center px-2">
+                                    <h2 class="app-card-title text-capitalize dark-color fs-18 fw-medium m-0">
+                                        Payment links
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-card col-sm-6 col-md-4 col-xl-3 mt-4">
+                            <div class="h-100 radius-10 d-flex flex-column shadow-1 bg-white">
+                                <div class="height-80 w-100">
+                                    <img src="/assets/app_8.png" alt="image" class="w-100 radius-10" />
+                                </div>
+                                <div class="h-50 d-flex align-items-center px-2">
+                                    <h2 class="app-card-title text-capitalize dark-color fs-18 fw-medium m-0">
+                                        Flat-rate shipping
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-card col-sm-6 col-md-4 col-xl-3 mt-4">
+                            <div class="h-100 radius-10 d-flex flex-column shadow-1 bg-white">
+                                <div class="height-80 w-100">
+                                    <img src="/assets/app_9.png" alt="image" class="w-100 radius-10" />
+                                </div>
+                                <div class="h-50 d-flex align-items-center px-2">
+                                    <h2 class="app-card-title text-capitalize dark-color fs-18 fw-medium m-0">
+                                        FedEX
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-card col-sm-6 col-md-4 col-xl-3 mt-4">
+                            <div class="h-100 radius-10 d-flex flex-column shadow-1 bg-white">
+                                <div class="height-80 w-100">
+                                    <img src="/assets/app_10.png" alt="image" class="w-100 radius-10" />
+                                </div>
+                                <div class="h-50 d-flex align-items-center px-2">
+                                    <h2 class="app-card-title text-capitalize dark-color fs-18 fw-medium m-0">
+                                        Free shipping
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-card col-sm-6 col-md-4 col-xl-3 mt-4">
+                            <div class="h-100 radius-10 d-flex flex-column shadow-1 bg-white">
+                                <div class="height-80 w-100">
+                                    <img src="/assets/app_11.png" alt="image" class="w-100 radius-10" />
+                                </div>
+                                <div class="h-50 d-flex align-items-center px-2">
+                                    <h2 class="app-card-title text-capitalize dark-color fs-18 fw-medium m-0">
+                                        Product automations
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-card col-sm-6 col-md-4 col-xl-3 mt-4">
+                            <div class="h-100 radius-10 d-flex flex-column shadow-1 bg-white">
+                                <div class="height-80 w-100">
+                                    <img src="/assets/app_12.png" alt="image" class="w-100 radius-10" />
+                                </div>
+                                <div class="h-50 d-flex align-items-center px-2">
+                                    <h2 class="app-card-title text-capitalize dark-color fs-18 fw-medium m-0">
+                                        API Integration
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-card col-sm-6 col-md-4 col-xl-3 mt-4">
+                            <div class="h-100 radius-10 d-flex flex-column shadow-1 bg-white">
+                                <div class="height-80 w-100">
+                                    <img src="/assets/app_13.png" alt="image" class="w-100 radius-10" />
+                                </div>
+                                <div class="h-50 d-flex align-items-center px-2">
+                                    <h2 class="app-card-title w-50 text-capitalize dark-color fs-18 fw-medium m-0">
+                                        Dhru fusion automations
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-card col-sm-6 col-md-4 col-xl-3 mt-4">
+                            <div class="h-100 radius-10 d-flex flex-column shadow-1 bg-white">
+                                <div class="height-80 w-100">
+                                    <img src="/assets/app_2.png" alt="image" class="w-100 radius-10" />
+                                </div>
+                                <div class="h-50 d-flex align-items-center px-2">
+                                    <h2 class="app-card-title w-80 text-capitalize dark-color fs-18 fw-medium m-0">
+                                        Manual Payment merchant gateway
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-card col-sm-6 col-md-4 col-xl-3 mt-4">
+                            <div class="h-100 radius-10 d-flex flex-column shadow-1 bg-white">
+                                <div class="height-80 w-100">
+                                    <img src="/assets/app_3.png" alt="image" class="w-100 radius-10" />
+                                </div>
+                                <div class="h-50 d-flex align-items-center px-2">
+                                    <h2 class="app-card-title text-capitalize dark-color fs-18 fw-medium m-0">
+                                        Paypal express checkout merchant
+                                        gateway
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-card col-sm-6 col-md-4 col-xl-3 mt-4">
+                            <div class="h-100 radius-10 d-flex flex-column shadow-1 bg-white">
+                                <div class="height-80 w-100">
+                                    <img src="/assets/app_14.png" alt="image" class="w-100 radius-10" />
+                                </div>
+                                <div class="h-50 d-flex align-items-center px-2">
+                                    <h2 class="app-card-title text-capitalize dark-color fs-18 fw-medium m-0">
+                                        GMS Store
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- application End -->
+        </div>
+    </div>
+    <script src="/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
